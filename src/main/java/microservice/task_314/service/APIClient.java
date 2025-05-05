@@ -1,12 +1,16 @@
-package microservice.task_314;
+package microservice.task_314.service;
 
 import microservice.task_314.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+@Service
 public class APIClient {
     private RestTemplate restTemplate;
     private static String sessionId;
+
 
     public APIClient() {
         restTemplate = new RestTemplate();
